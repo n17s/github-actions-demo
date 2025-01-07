@@ -36,7 +36,7 @@ echo "Files copied successfully."
 # Commit the container with the specified changes
 echo "Committing the container..."
 docker commit \
-  --change 'ENV PATH="$PATH:/opt/acttoolcache/Java_Temurin-Hotspot_jdk/21.0.5-11.0.LTS/x64/bin:/opt/acttoolcache/Ruby/3.3.6/x64/bin:/opt/acttoolcache/go/1.23.4/x64/bin:/opt/acttoolcache/go/workspace/bin:/usr/share/dotnet:/opt/acttoolcache/node/20.18.1/x64/bin"' \
+  --change 'ENV PATH="/opt/acttoolcache/node/20.18.1/x64/bin:$PATH:/opt/acttoolcache/Java_Temurin-Hotspot_jdk/21.0.5-11.0.LTS/x64/bin:/opt/acttoolcache/Ruby/3.3.6/x64/bin:/opt/acttoolcache/go/1.23.4/x64/bin:/opt/acttoolcache/go/workspace/bin:/usr/share/dotnet"' \
   --change 'ENV JAVA_HOME="/opt/acttoolcache/Java_Temurin-Hotspot_jdk/21.0.5-11.0.LTS/x64"' \
   --change 'ENV GEM_HOME="/opt/hostedtoolcache/Ruby/3.3.6/x64/lib/ruby/gems"' \
   --change 'ENV GEM_PATH="/opt/hostedtoolcache/Ruby/3.3.6/x64/lib/ruby/gems"' \
